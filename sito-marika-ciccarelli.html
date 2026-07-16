@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marika Ciccarelli — Career Coach &amp; HR Consultant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rosa:#F8E9EE;
+    --rosa-2:#F2D9E2;
+    --bianco:#FFFFFF;
+    --prugna:#5A2A4A;
+    --prugna-2:#7A3F66;
+    --testo:#3A2632;
+    --testo-soft:#6E5868;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Lato',sans-serif;
+    color:var(--testo);
+    background:var(--bianco);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.brand{
+    font-family:'Montserrat',sans-serif;
+  }
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  img{max-width:100%;display:block;}
+  .container{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+  section{
+    padding:110px 0;
+  }
+  .section-tight{padding:90px 0;}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--rosa-2);
+  }
+  .nav-wrap{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 32px;
+    max-width:1120px;
+    margin:0 auto;
+  }
+  .brand{
+    font-weight:700;
+    font-size:1.15rem;
+    color:var(--prugna);
+    letter-spacing:0.02em;
+  }
+  .brand span{
+    display:block;
+    font-family:'Lato',sans-serif;
+    font-weight:400;
+    font-size:0.68rem;
+    color:var(--testo-soft);
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    margin-top:2px;
+  }
+  nav ul{
+    display:flex;
+    gap:34px;
+  }
+  nav a{
+    font-size:0.92rem;
+    font-weight:500;
+    color:var(--testo);
+    transition:color .25s;
+    position:relative;
+  }
+  nav a:hover{color:var(--prugna);}
+  .nav-cta{
+    background:var(--prugna);
+    color:#fff !important;
+    padding:10px 22px;
+    border-radius:999px;
+    font-size:0.88rem;
+    font-weight:600;
+    transition:background .25s, transform .25s;
+    white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--prugna-2);}
+  .menu-toggle{display:none;background:none;border:none;font-size:1.6rem;color:var(--prugna);cursor:pointer;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:linear-gradient(180deg, var(--rosa) 0%, #FBF2F5 55%, #FFFFFF 100%);
+    padding:90px 0 110px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    width:520px;height:520px;
+    border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, rgba(90,42,74,0.08), transparent 70%);
+    top:-180px; right:-160px;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:60px;
+    align-items:center;
+    position:relative;
+    z-index:1;
+  }
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:0.78rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--prugna);
+    font-weight:600;
+    margin-bottom:22px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px;height:1px;
+    background:var(--prugna);
+    display:inline-block;
+  }
+  .hero h1{
+    font-size:clamp(2.1rem, 4vw, 3.2rem);
+    font-weight:700;
+    color:var(--prugna);
+    line-height:1.18;
+    letter-spacing:-0.01em;
+    margin-bottom:24px;
+  }
+  .hero p.lead{
+    font-size:1.08rem;
+    color:var(--testo-soft);
+    max-width:480px;
+    margin-bottom:34px;
+  }
+  .cta-row{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+    align-items:center;
+  }
+  .btn{
+    display:inline-block;
+    padding:14px 30px;
+    border-radius:999px;
+    font-weight:600;
+    font-size:0.95rem;
+    transition:all .25s;
+    border:1.5px solid transparent;
+  }
+  .btn-primary{
+    background:var(--prugna);
+    color:#fff;
+  }
+  .btn-primary:hover{background:var(--prugna-2); transform:translateY(-2px);}
+  .btn-outline{
+    border:1.5px solid var(--prugna);
+    color:var(--prugna);
+  }
+  .btn-outline:hover{background:var(--prugna); color:#fff;}
+
+  .hero-photo{
+    position:relative;
+    display:flex;
+    justify-content:center;
+  }
+  .photo-frame{
+    width:100%;
+    max-width:380px;
+    aspect-ratio:4/5;
+    border-radius:28px;
+    background:linear-gradient(160deg, var(--rosa-2), #fff 70%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    box-shadow:0 30px 60px -20px rgba(90,42,74,0.25);
+    border:1px solid #f1d8e3;
+  }
+  .photo-frame .initials{
+    font-family:'Montserrat',sans-serif;
+    font-size:5rem;
+    font-weight:700;
+    color:var(--prugna);
+    opacity:0.85;
+  }
+  .photo-frame .caption{
+    position:absolute;
+    bottom:-18px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#fff;
+    padding:10px 24px;
+    border-radius:999px;
+    font-size:0.82rem;
+    font-weight:600;
+    color:var(--prugna);
+    box-shadow:0 10px 25px -8px rgba(90,42,74,0.3);
+    white-space:nowrap;
+  }
+
+  /* ---------- MINI BIO ---------- */
+  .minibio{
+    background:#fff;
+    padding:70px 0 30px;
+  }
+  .minibio p{
+    max-width:700px;
+    font-size:1.08rem;
+    color:var(--testo-soft);
+  }
+  .minibio strong{color:var(--prugna);}
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section-head{
+    max-width:600px;
+    margin-bottom:54px;
+  }
+  .section-head .eyebrow{margin-bottom:14px;}
+  .section-head h2{
+    font-size:clamp(1.7rem, 3vw, 2.3rem);
+    color:var(--prugna);
+    font-weight:700;
+    line-height:1.25;
+  }
+  .section-head p{
+    color:var(--testo-soft);
+    margin-top:14px;
+    font-size:1.02rem;
+  }
+  .center{text-align:center; margin-left:auto; margin-right:auto;}
+
+  /* ---------- SERVICES ---------- */
+  .services{
+    background:var(--rosa);
+  }
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
+  }
+  .service-card{
+    background:#fff;
+    border-radius:22px;
+    padding:38px 32px;
+    border:1px solid #f1d8e3;
+    transition:transform .3s, box-shadow .3s;
+  }
+  .service-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 24px 40px -16px rgba(90,42,74,0.18);
+  }
+  .icon-circle{
+    width:52px;height:52px;
+    border-radius:50%;
+    background:var(--rosa);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:22px;
+  }
+  .icon-circle svg{width:24px;height:24px; stroke:var(--prugna);}
+  .service-card h3{
+    font-size:1.18rem;
+    color:var(--prugna);
+    margin-bottom:12px;
+    font-weight:600;
+  }
+  .service-card p{
+    color:var(--testo-soft);
+    font-size:0.97rem;
+    margin-bottom:20px;
+  }
+  .service-card a.link{
+    font-size:0.88rem;
+    font-weight:600;
+    color:var(--prugna);
+    border-bottom:1.5px solid var(--prugna);
+    padding-bottom:2px;
+  }
+
+  /* ---------- CHI SONO ---------- */
+  .chisono{
+    background:#fff;
+  }
+  .chisono-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:64px;
+    align-items:start;
+  }
+  .chisono-photo .photo-frame{max-width:320px;}
+  .credenziali{
+    margin-top:30px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .credenziali .item{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    font-size:0.9rem;
+    color:var(--testo-soft);
+  }
+  .credenziali .dot{
+    width:8px;height:8px;
+    border-radius:50%;
+    background:var(--prugna);
+    margin-top:7px;
+    flex-shrink:0;
+  }
+  .chisono-text h2{
+    font-size:clamp(1.7rem,3vw,2.2rem);
+    color:var(--prugna);
+    margin-bottom:22px;
+    font-weight:700;
+    line-height:1.3;
+  }
+  .chisono-text p{
+    color:var(--testo-soft);
+    margin-bottom:18px;
+    font-size:1.02rem;
+  }
+  .competenze{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:26px 0 32px;
+  }
+  .tag{
+    background:var(--rosa);
+    color:var(--prugna);
+    font-size:0.82rem;
+    font-weight:600;
+    padding:8px 16px;
+    border-radius:999px;
+  }
+
+  /* ---------- SERVIZI DETTAGLIO ---------- */
+  .servizi-detail{
+    background:var(--rosa);
+  }
+  .servizio-block{
+    background:#fff;
+    border-radius:26px;
+    padding:48px;
+    margin-bottom:28px;
+    display:grid;
+    grid-template-columns:0.4fr 1fr;
+    gap:40px;
+    border:1px solid #f1d8e3;
+  }
+  .servizio-block:last-child{margin-bottom:0;}
+  .servizio-label{
+    font-family:'Montserrat',sans-serif;
+    font-weight:700;
+    font-size:1rem;
+    color:var(--prugna);
+  }
+  .servizio-label .num{
+    display:block;
+    font-size:2.6rem;
+    color:var(--rosa-2);
+    font-weight:700;
+    margin-bottom:8px;
+    line-height:1;
+  }
+  .servizio-content h3{
+    font-size:1.4rem;
+    color:var(--prugna);
+    margin-bottom:14px;
+    font-weight:700;
+  }
+  .servizio-content p{
+    color:var(--testo-soft);
+    margin-bottom:18px;
+  }
+  .servizio-content .benefici{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:24px;
+  }
+  .benefici span{
+    font-size:0.82rem;
+    background:var(--rosa);
+    color:var(--prugna);
+    padding:7px 14px;
+    border-radius:999px;
+    font-weight:500;
+  }
+  .servizio-content a.btn{padding:11px 24px; font-size:0.88rem;}
+
+  /* ---------- TESTIMONIANZE ---------- */
+  .testimonianze{background:#fff;}
+  .test-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+  }
+  .test-card{
+    background:var(--rosa);
+    border-radius:22px;
+    padding:34px 30px;
+    position:relative;
+  }
+  .test-card .quote-mark{
+    font-family:'Montserrat',sans-serif;
+    font-size:2.6rem;
+    color:var(--rosa-2);
+    line-height:1;
+    margin-bottom:6px;
+    font-weight:700;
+  }
+  .test-card p{
+    color:var(--testo);
+    font-size:0.98rem;
+    font-style:italic;
+    margin-bottom:18px;
+  }
+  .test-card .autore{
+    font-size:0.85rem;
+    font-weight:700;
+    color:var(--prugna);
+    font-style:normal;
+  }
+
+  /* ---------- PRENOTA ---------- */
+  .prenota{
+    background:linear-gradient(160deg, var(--prugna) 0%, #4A2240 100%);
+    color:#fff;
+  }
+  .prenota .section-head h2,
+  .prenota .eyebrow{color:#fff;}
+  .prenota .section-head p{color:#E7D2DE;}
+  .prenota-grid{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:54px;
+    align-items:start;
+  }
+  .prenota-info .item{
+    display:flex;
+    gap:14px;
+    margin-bottom:22px;
+    align-items:flex-start;
+  }
+  .prenota-info .item .icon-circle{
+    background:rgba(255,255,255,0.12);
+    flex-shrink:0;
+  }
+  .prenota-info .icon-circle svg{stroke:#fff;}
+  .prenota-info h4{font-size:1rem; margin-bottom:4px; font-weight:600;}
+  .prenota-info p{color:#E7D2DE; font-size:0.92rem;}
+
+  form{
+    background:#fff;
+    border-radius:24px;
+    padding:38px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+  }
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  label{
+    font-size:0.82rem;
+    font-weight:600;
+    color:var(--prugna);
+    margin-bottom:6px;
+    display:block;
+  }
+  input,select,textarea{
+    width:100%;
+    padding:12px 14px;
+    border:1.5px solid #ECD7E0;
+    border-radius:12px;
+    font-family:'Lato',sans-serif;
+    font-size:0.95rem;
+    color:var(--testo);
+    background:#FFFBFC;
+    transition:border-color .2s;
+  }
+  input:focus,select:focus,textarea:focus{
+    outline:none;
+    border-color:var(--prugna);
+  }
+  textarea{resize:vertical; min-height:100px;}
+  .file-field{
+    border:1.5px dashed #ECD7E0;
+    border-radius:12px;
+    padding:18px;
+    text-align:center;
+    font-size:0.88rem;
+    color:var(--testo-soft);
+    background:#FFFBFC;
+  }
+  .submit-btn{
+    background:var(--prugna);
+    color:#fff;
+    border:none;
+    padding:15px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:0.98rem;
+    cursor:pointer;
+    transition:background .25s;
+    margin-top:6px;
+  }
+  .submit-btn:hover{background:var(--prugna-2);}
+
+  /* ---------- BLOG ---------- */
+  .blog{background:var(--rosa);}
+  .blog-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+  }
+  .blog-card{
+    background:#fff;
+    border-radius:22px;
+    overflow:hidden;
+    border:1px solid #f1d8e3;
+    transition:transform .3s;
+  }
+  .blog-card:hover{transform:translateY(-5px);}
+  .blog-thumb{
+    height:150px;
+    background:linear-gradient(135deg, var(--rosa-2), var(--rosa));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .blog-thumb svg{width:34px; height:34px; stroke:var(--prugna);}
+  .blog-card .content{padding:26px;}
+  .blog-tag{
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--prugna);
+    font-weight:700;
+    margin-bottom:10px;
+    display:block;
+  }
+  .blog-card h3{
+    font-size:1.05rem;
+    color:var(--testo);
+    margin-bottom:10px;
+    font-weight:600;
+    line-height:1.4;
+  }
+  .blog-card p{
+    font-size:0.88rem;
+    color:var(--testo-soft);
+    margin-bottom:16px;
+  }
+  .blog-card a.link{
+    font-size:0.85rem;
+    font-weight:700;
+    color:var(--prugna);
+  }
+  .blog-cta{text-align:center; margin-top:46px;}
+
+  /* ---------- CONTATTI ---------- */
+  .contatti{background:#fff;}
+  .contatti-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:54px;
+    align-items:center;
+  }
+  .contatti-card{
+    background:var(--rosa);
+    border-radius:26px;
+    padding:44px;
+  }
+  .contatti-card .item{
+    display:flex;
+    gap:16px;
+    align-items:center;
+    margin-bottom:20px;
+  }
+  .contatti-card .item:last-child{margin-bottom:0;}
+  .contatti-card .item span{
+    font-size:0.95rem;
+    color:var(--testo);
+    font-weight:500;
+    word-break:break-word;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:#3A2632;
+    color:#E7D2DE;
+    padding:50px 0 28px;
+  }
+  .footer-grid{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:30px;
+    margin-bottom:34px;
+  }
+  footer .brand{color:#fff;}
+  footer .brand span{color:#C9A6BB;}
+  footer nav ul{
+    display:flex;
+    gap:24px;
+    flex-wrap:wrap;
+  }
+  footer nav a{font-size:0.86rem; color:#E7D2DE;}
+  footer nav a:hover{color:#fff;}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.12);
+    padding-top:22px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:14px;
+    font-size:0.82rem;
+    color:#B89AAA;
+  }
+  .footer-bottom a{color:#B89AAA;}
+  .footer-bottom a:hover{color:#fff;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    .hero-grid, .chisono-grid, .prenota-grid, .contatti-grid{
+      grid-template-columns:1fr;
+    }
+    .hero-photo{order:-1;}
+    .services-grid, .test-grid, .blog-grid{grid-template-columns:1fr 1fr;}
+    .servizio-block{grid-template-columns:1fr;}
+    nav{display:none;}
+    .menu-toggle{display:block;}
+  }
+  @media (max-width:600px){
+    section{padding:70px 0;}
+    .services-grid, .test-grid, .blog-grid{grid-template-columns:1fr;}
+    .form-row{grid-template-columns:1fr;}
+    .nav-cta{display:none;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important; scroll-behavior:auto !important;}
+  }
+
+  :focus-visible{
+    outline:2px solid var(--prugna);
+    outline-offset:3px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a href="#home" class="brand">Marika Ciccarelli<span>Career Coach &amp; HR Consultant</span></a>
+    <nav>
+      <ul>
+        <li><a href="#chisono">Chi sono</a></li>
+        <li><a href="#servizi">Servizi</a></li>
+        <li><a href="#testimonianze">Testimonianze</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+    </nav>
+    <a href="#prenota" class="btn nav-cta">Prenota una consulenza</a>
+  </div>
+</header>
+
+<!-- ============ HOME / HERO ============ -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Career Coaching &amp; HR Consulting</span>
+      <h1>Ritrova la tua direzione professionale.<br>Costruisci una carriera che ti rappresenta davvero.</h1>
+      <p class="lead">Supporto personalizzato per studenti, giovani professionisti e adulti in transizione. Career Coaching, Orientamento e Consulenza HR con un approccio umano, chiaro e strutturato.</p>
+      <div class="cta-row">
+        <a href="#prenota" class="btn btn-primary">Prenota la tua consulenza</a>
+        <a href="https://www.linkedin.com/in/marika-ciccarelli" target="_blank" rel="noopener" class="btn btn-outline">Visita il mio LinkedIn</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="photo-frame">
+        <span class="initials">MC</span>
+        <span class="caption">Marika Ciccarelli</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MINI BIO ============ -->
+<section class="minibio section-tight">
+  <div class="container">
+    <p><strong>Sono Marika Ciccarelli</strong>, Career Coach e HR Consultant. Aiuto persone e aziende a valorizzare competenze, obiettivi e potenziale, attraverso percorsi di orientamento, coaching e gestione HR. Credo in un approccio pratico, accogliente e orientato ai risultati.</p>
+  </div>
+</section>
+
+<!-- ============ COSA POSSO FARE PER TE ============ -->
+<section class="services" id="servizi">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Cosa posso fare per te</span>
+      <h2>Tre percorsi, un solo obiettivo: farti crescere</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+        </div>
+        <h3>Career Coaching</h3>
+        <p>Percorsi personalizzati per definire obiettivi, migliorare il CV e prepararsi ai colloqui.</p>
+        <a href="#career-coaching" class="link">Scopri il percorso →</a>
+      </div>
+      <div class="service-card">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l18-7-7 18-3-8-8-3z"/></svg>
+        </div>
+        <h3>Orientamento Professionale</h3>
+        <p>Supporto per scegliere il percorso più adatto, cambiare direzione o ripartire con consapevolezza.</p>
+        <a href="#orientamento" class="link">Scopri il percorso →</a>
+      </div>
+      <div class="service-card">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>HR Management</h3>
+        <p>Consulenza per aziende: recruiting, onboarding, processi HR.</p>
+        <a href="#hr-management" class="link">Scopri il percorso →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHI SONO ============ -->
+<section class="chisono" id="chisono">
+  <div class="container chisono-grid">
+    <div class="chisono-photo">
+      <div class="photo-frame">
+        <span class="initials">MC</span>
+      </div>
+      <div class="credenziali">
+        <div class="item"><span class="dot"></span>Registro Orientatori ASNOR</div>
+        <div class="item"><span class="dot"></span>Iscritta agli Orientatori della Regione Toscana</div>
+        <div class="item"><span class="dot"></span>Master in Management delle Risorse Umane</div>
+        <div class="item"><span class="dot"></span>Magistrale in Psicologia del Lavoro e delle Organizzazioni (in corso)</div>
+      </div>
+    </div>
+    <div class="chisono-text">
+      <span class="eyebrow">Chi sono</span>
+      <h2>Piacere, sono Marika.<br>Ti accompagno nella costruzione della tua strada professionale.</h2>
+      <p>Lavoro nel mondo HR e dell'orientamento con un approccio che unisce ascolto, metodo e concretezza. Dopo esperienze in realtà multinazionali come Toscotec, Gi Group e Adecco, oggi supporto persone e aziende attraverso percorsi di Career Coaching, Orientamento e HR Management.</p>
+      <p>Sono iscritta al Registro Orientatori ASNOR e ho completato un Master in Management delle Risorse Umane. Sto proseguendo la mia formazione con una Magistrale in Psicologia del Lavoro e delle Organizzazioni.</p>
+      <p>Credo che ogni persona abbia una storia professionale unica: il mio compito è aiutarti a leggerla, valorizzarla e trasformarla in opportunità.</p>
+      <div class="competenze">
+        <span class="tag">Bilancio delle competenze</span>
+        <span class="tag">Colloqui &amp; CV</span>
+        <span class="tag">Recruiting</span>
+        <span class="tag">Onboarding</span>
+        <span class="tag">Orientamento scolastico</span>
+      </div>
+      <a href="#servizi-dettaglio" class="btn btn-primary">Scopri i miei servizi</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVIZI DETTAGLIO ============ -->
+<section class="servizi-detail" id="servizi-dettaglio">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">I miei servizi</span>
+      <h2>Un percorso su misura per ogni fase del tuo cammino</h2>
+    </div>
+
+    <div class="servizio-block" id="career-coaching">
+      <div class="servizio-label"><span class="num">01</span>Career Coaching</div>
+      <div class="servizio-content">
+        <h3>Career Coaching</h3>
+        <p>Percorsi individuali per definire obiettivi, chiarire la direzione professionale e acquisire strumenti concreti per presentarti al meglio. Lavoriamo insieme su CV, lettera di presentazione, LinkedIn, colloqui e bilancio delle competenze.</p>
+        <div class="benefici">
+          <span>Bilancio competenze</span>
+          <span>CV &amp; lettera di presentazione</span>
+          <span>Preparazione colloqui</span>
+          <span>Empowerment personale</span>
+        </div>
+        <a href="#prenota" class="btn btn-primary">Prenota una sessione</a>
+      </div>
+    </div>
+
+    <div class="servizio-block" id="orientamento">
+      <div class="servizio-label"><span class="num">02</span>Orientamento Professionale</div>
+      <div class="servizio-content">
+        <h3>Orientamento Professionale</h3>
+        <p>Supporto dedicato a studenti, giovani e adulti che vogliono capire quale strada intraprendere, cambiare settore o ripartire con maggiore consapevolezza. Analizziamo interessi, attitudini, competenze e obiettivi.</p>
+        <div class="benefici">
+          <span>Analisi attitudini</span>
+          <span>Scelta del percorso</span>
+          <span>Transizioni di carriera</span>
+          <span>Consapevolezza</span>
+        </div>
+        <a href="#prenota" class="btn btn-primary">Prenota una sessione</a>
+      </div>
+    </div>
+
+    <div class="servizio-block" id="hr-management">
+      <div class="servizio-label"><span class="num">03</span>HR Management &amp; Recruiting</div>
+      <div class="servizio-content">
+        <h3>HR Management &amp; Recruiting</h3>
+        <p>Consulenza per aziende e professionisti: selezione del personale, onboarding, gestione HR, processi e strumenti operativi. Un supporto chiaro, strutturato e orientato ai risultati.</p>
+        <div class="benefici">
+          <span>Selezione del personale</span>
+          <span>Onboarding</span>
+          <span>Processi HR</span>
+          <span>Strumenti operativi</span>
+        </div>
+        <a href="#prenota" class="btn btn-primary">Prenota una sessione</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIANZE ============ -->
+<section class="testimonianze" id="testimonianze">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Testimonianze</span>
+      <h2>Le parole di chi ha già intrapreso un percorso con me</h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <span class="quote-mark">“</span>
+        <p>Grazie al percorso con Marika ho finalmente capito quale direzione prendere.</p>
+        <span class="autore">— Cliente Career Coaching</span>
+      </div>
+      <div class="test-card">
+        <span class="quote-mark">“</span>
+        <p>Mi ha aiutato a riscrivere il CV e a prepararmi ai colloqui: ho trovato lavoro in un mese.</p>
+        <span class="autore">— Cliente Orientamento</span>
+      </div>
+      <div class="test-card">
+        <span class="quote-mark">“</span>
+        <p>Professionale, empatica e molto preparata. Consigliatissima.</p>
+        <span class="autore">— Cliente HR Management</span>
+      </div>
+    </div>
+    <div class="blog-cta">
+      <a href="#prenota" class="btn btn-primary">Inizia il tuo percorso</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRENOTA ============ -->
+<section class="prenota" id="prenota">
+  <div class="container prenota-grid">
+    <div class="prenota-info">
+      <span class="eyebrow">Prenota</span>
+      <div class="section-head" style="margin-bottom:30px;">
+        <h2>Prenota la tua consulenza</h2>
+        <p>Scegli il servizio che fa per te, indica le tue esigenze e — se vuoi — allega il tuo CV. Ti risponderò entro 24 ore con tutte le informazioni necessarie.</p>
+      </div>
+      <div class="item">
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+        <div><h4>Risposta in 24 ore</h4><p>Riceverai tutte le informazioni per organizzare la sessione.</p></div>
+      </div>
+      <div class="item">
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
+        <div><h4>Allega il tuo CV</h4><p>Facoltativo, ma utile per preparare al meglio il primo incontro.</p></div>
+      </div>
+      <div class="item">
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div><h4>Oppure scrivimi direttamente</h4><p>marikaciccarelli.orientamento@outlook.it</p></div>
+      </div>
+    </div>
+
+    <form>
+      <div class="form-row">
+        <div>
+          <label for="nome">Nome e cognome</label>
+          <input type="text" id="nome" placeholder="Il tuo nome" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="nome@email.com" required>
+        </div>
+      </div>
+      <div>
+        <label for="servizio">Servizio di interesse</label>
+        <select id="servizio">
+          <option>Career Coaching</option>
+          <option>Orientamento Professionale</option>
+          <option>HR Management &amp; Recruiting</option>
+        </select>
+      </div>
+      <div>
+        <label for="messaggio">Raccontami le tue esigenze</label>
+        <textarea id="messaggio" placeholder="Scrivi qui il tuo messaggio..."></textarea>
+      </div>
+      <div>
+        <label>Allega il tuo CV (facoltativo)</label>
+        <div class="file-field">Trascina qui il file oppure clicca per selezionarlo (PDF)</div>
+      </div>
+      <button type="submit" class="submit-btn">Invia richiesta</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ BLOG ============ -->
+<section class="blog" id="blog">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Blog &amp; Risorse</span>
+      <h2>Risorse per la tua crescita professionale</h2>
+      <p class="center">Guide, articoli e consigli pratici su carriera, HR, colloqui, CV e sviluppo professionale. Contenuti pensati per aiutarti a fare chiarezza e prendere decisioni consapevoli.</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-thumb"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
+        <div class="content">
+          <span class="blog-tag">CV</span>
+          <h3>5 errori comuni nel CV che ti escludono dai colloqui</h3>
+          <p>Le scelte di formato e contenuto che fanno la differenza nella selezione.</p>
+          <a href="#" class="link">Leggi l'articolo →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 9l3 3 3-3M9 15l3-3 3 3"/></svg></div>
+        <div class="content">
+          <span class="blog-tag">Colloqui</span>
+          <h3>Come prepararsi a un colloquio di lavoro in 7 giorni</h3>
+          <p>Una guida pratica per affrontare il colloquio con sicurezza.</p>
+          <a href="#" class="link">Leggi l'articolo →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l18-7-7 18-3-8-8-3z"/></svg></div>
+        <div class="content">
+          <span class="blog-tag">Orientamento</span>
+          <h3>Cambiare carriera dopo i 30: da dove iniziare</h3>
+          <p>I passaggi concreti per ripartire con consapevolezza.</p>
+          <a href="#" class="link">Leggi l'articolo →</a>
+        </div>
+      </div>
+    </div>
+    <div class="blog-cta">
+      <a href="#" class="btn btn-outline">Leggi gli articoli</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTATTI ============ -->
+<section class="contatti" id="contatti">
+  <div class="container contatti-grid">
+    <div>
+      <span class="eyebrow">Contatti</span>
+      <h2 style="font-size:clamp(1.7rem,3vw,2.2rem); color:var(--prugna); font-weight:700; margin-bottom:16px;">Parliamone</h2>
+      <p style="color:var(--testo-soft); margin-bottom:28px;">Per informazioni, richieste o collaborazioni, puoi contattarmi tramite il form o via email. Se preferisci, puoi anche collegarti con me su LinkedIn.</p>
+      <a href="https://www.linkedin.com/in/marika-ciccarelli" target="_blank" rel="noopener" class="btn btn-primary">Collegati su LinkedIn</a>
+    </div>
+    <div class="contatti-card">
+      <div class="item">
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></div>
+        <span>marikaciccarelli.orientamento@outlook.it</span>
+      </div>
+      <div class="item">
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+        <span>linkedin.com/in/marika-ciccarelli</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <a href="#home" class="brand">Marika Ciccarelli<span>Career Coach &amp; HR Consultant</span></a>
+      <nav>
+        <ul>
+          <li><a href="#chisono">Chi sono</a></li>
+          <li><a href="#servizi-dettaglio">Servizi</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Marika Ciccarelli. Tutti i diritti riservati.</span>
+      <div style="display:flex; gap:20px;">
+        <a href="#">Privacy</a>
+        <a href="#">Cookie</a>
+        <a href="https://www.linkedin.com/in/marika-ciccarelli" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
